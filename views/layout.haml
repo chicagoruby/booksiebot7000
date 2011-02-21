@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %link{ :rel => 'shortcut icon', :href => '/favicon.ico' }
+  %body
+    %header
+      %nav
+    = yield
+    %footer
+      %ul
+        %li Environment: #{settings.environment}
+        %li Public: #{settings.public}
+        %Li Views: #{settings.views}
+
