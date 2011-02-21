@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/ethangunderson/sinatra-mongo-config.git
+  revision: b00000c79a50d963e89cc89f39279317894118ad
+  specs:
+    sinatra-mongo-config (0.0.1)
+      bson_ext (>= 1.0)
+      mongo (>= 1.0)
+      sinatra (>= 1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -36,3 +45,4 @@ DEPENDENCIES
   rspec
   shotgun
   sinatra
+  sinatra-mongo-config!

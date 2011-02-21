@@ -4,6 +4,7 @@ gem 'sinatra'
 gem 'mongo'
 gem 'bson_ext'
 gem 'haml'
+gem 'sinatra-mongo-config', :git => 'git://github.com/ethangunderson/sinatra-mongo-config.git'
 
 group :development do
   gem 'shotgun'
