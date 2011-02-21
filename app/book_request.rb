@@ -1,0 +1,2 @@
+class BookRequest
+end

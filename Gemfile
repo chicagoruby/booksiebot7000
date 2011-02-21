@@ -1,7 +1,8 @@
 source :rubygems
 
 gem 'sinatra'
-gem 'sequel'
+gem 'mongo'
+gem 'bson_ext'
 gem 'haml'
 
 group :development do
