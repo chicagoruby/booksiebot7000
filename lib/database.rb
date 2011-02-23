@@ -13,3 +13,9 @@ migration "create book_requests table" do
   end
 end
 
+migration "add request fields to book_requests" do
+  database.alter_table :book_requests do
+    add_column :publisher, :string
+    add_column :electronic, :boolean
+  end
+end

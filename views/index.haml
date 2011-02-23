@@ -1,16 +1,28 @@
-%form{ :action => '/book_requests', 
-       :method => 'post', 
-       :class => 'new_book_request' }
+%fieldset
+  %legend Book Request
+  %form{ :action => '/book_requests', 
+         :method => 'post', 
+         :class => 'new_book_request' }
 
-  %ul
-    %li
-      %label{ :for => 'book_request_title' } Title:
-      %input{ :name => 'book_request[title]', 
-              :type => 'text', 
-              :id => 'book_request_title' }
+    %ul
+      %li
+        %label{ :for => 'book_request_title' } Title:
+        %input{ :name => 'book_request[title]', 
+                :type => 'text', 
+                :id => 'book_request_title' }
+      %li
+        %label{ :for => 'book_request_publisher' } Publisher:
+        %input{ :name => 'book_request[publisher]', 
+                :type => 'text', 
+                :id => 'book_request_publisher' }
+      %li
+        %label{ :for => 'book_request_electronic' } Electronic if possible?:
+        %input{ :name => 'book_request[electronic]', 
+                :type => 'checkbox', 
+                :id => 'book_request_electronic' }
 
-  %input{ :type => 'submit', :value => 'Submit', 
-          :name => 'commit', :id => 'book_request_submit' }
+    %input{ :type => 'submit', :value => 'Submit', 
+            :name => 'commit', :id => 'book_request_submit' }
 
 - unless @requests.empty?
   %current_requests
