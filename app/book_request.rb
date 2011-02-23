@@ -1,2 +1,2 @@
-class BookRequest
+class BookRequest < Sequel::Model
 end

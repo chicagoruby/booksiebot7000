@@ -5,10 +5,8 @@
   %body
     %header
       %nav
+      - [:notice, :alert].each do |type|
+        - if flash[type]
+          %h1{:class => type.to_s}= flash[type]
     = yield
     %footer
-      %ul
-        %li Environment: #{settings.environment}
-        %li Public: #{settings.public}
-        %Li Views: #{settings.views}
-

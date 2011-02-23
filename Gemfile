@@ -1,10 +1,10 @@
 source :rubygems
 
 gem 'sinatra'
-gem 'mongo'
-gem 'bson_ext'
+gem 'sqlite3-ruby'
+gem 'sinatra-sequel'
 gem 'haml'
-gem 'sinatra-mongo-config', :git => 'git://github.com/ethangunderson/sinatra-mongo-config.git'
+gem 'rack-flash'
 
 group :development do
   gem 'shotgun'
