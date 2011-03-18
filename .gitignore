@@ -3,3 +3,4 @@ log/**/*
 tmp/**/*
 .*.sw*
 db/*.db
+.bundle
