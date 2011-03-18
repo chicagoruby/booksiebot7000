@@ -17,4 +17,8 @@ class Booksiebot < Sinatra::Base
       raise "WHOOPS"
     end
   end
+
+  get '/email' do
+      haml :email
+  end
 end
