@@ -19,6 +19,11 @@ class Booksiebot < Sinatra::Base
   end
 
   get '/email' do
-      haml :email
+    haml :email
   end
+
+  post '/reminder' do
+    haml :confirmation
+  end
+
 end
