@@ -17,4 +17,10 @@ class Booksiebot < Sinatra::Base
       raise "WHOOPS"
     end
   end
+
+  get '/report' do
+    @books_to_be_reviewed = BookRequest.where(:reviewed => 'f')
+    @books_waiting_to_sent_to_publisher = BookRequest.where(:reviewed => 't', :sent_to_publisher => 'f')
+    haml :report
+  end
 end

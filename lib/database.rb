@@ -19,3 +19,10 @@ migration "add request fields to book_requests" do
     add_column :electronic, :boolean
   end
 end
+
+migration "add booleans for reviewed? and sent_to_publisher?" do
+  database.alter_table :book_requests do
+    add_column :reviewed, :boolean
+    add_column :sent_to_publisher, :boolean
+  end
+end

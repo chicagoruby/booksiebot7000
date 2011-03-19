@@ -1,6 +1,6 @@
 %fieldset
   %legend Book Request
-  %form{ :action => '/book_requests', 
+  %form{ :action => '/book_requests',
          :method => 'post', 
          :class => 'new_book_request' }
 
@@ -24,8 +24,23 @@
     %input{ :type => 'submit', :value => 'Submit', 
             :name => 'commit', :id => 'book_request_submit' }
 
-- unless @requests.empty?
-  %current_requests
-    %ul
-      - @requests.each do |request|
-        %li= request.title
+%table{:border => "1px"}
+  %tr
+    %td== Title
+    %td== Publisher
+    %td== Electronic?
+    %td== Reviewed?
+    %td== Sent to Publisher?
+  - unless @requests.empty?
+    - @requests.each do |request|
+      %tr
+        %td= request.title
+        %td= request.publisher
+        %td= request.electronic
+        %td= request.reviewed
+        %td= request.sent_to_publisher
+
+%div
+  %a{:href => "/report"}
+    Report
+

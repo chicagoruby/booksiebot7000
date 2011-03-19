@@ -1,0 +1,39 @@
+To Be Reviewed:
+
+%table{:border => "1px"}
+  %tr
+    %td== Title
+    %td== Publisher
+    %td== Electronic?
+    %td== Reviewed?
+    %td== Sent to Publisher?
+  - unless @books_to_be_reviewed.empty?
+    - @books_to_be_reviewed.each do |request|
+      %tr
+        %td= request.title
+        %td= request.publisher
+        %td= request.electronic
+        %td= request.reviewed
+        %td= request.sent_to_publisher
+
+Reviewed, but not yet sent to publisher:
+%table{:border => "1px"}
+  %tr
+    %td== Title
+    %td== Publisher
+    %td== Electronic?
+    %td== Reviewed?
+    %td== Sent to Publisher?
+  - unless @books_waiting_to_sent_to_publisher.empty?
+    - @books_waiting_to_sent_to_publisher.each do |request|
+      %tr
+        %td= request.title
+        %td= request.publisher
+        %td= request.electronic
+        %td= request.reviewed
+        %td= request.sent_to_publisher
+
+%div
+  %a{:href => "/"}
+    Back to Home
+
