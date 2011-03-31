@@ -1,0 +1,27 @@
+%fieldset
+  %legend Send Email Reminder
+  %form{ :action => '/reminder', 
+         :method => 'post', 
+         :class => 'new_email_reminder' }
+
+    %ul
+      %li
+        %label{ :for => 'email_to' } To:
+        %input{ :name => 'to', 
+                :type => 'text', 
+                :id => 'email_to' }
+      %li
+        %label{ :for => 'email_subject' } Subject:
+        %input{ :name => 'subject', 
+                :type => 'text', 
+                :id => 'email_subject' }
+
+      %li
+        %label{ :for => 'email_body' } Body:
+        %textarea{ :name => 'body', 
+                :rows => '20', 
+                :cols => '60',  
+                :id => 'email_body' }
+
+    %input{ :type => 'submit', :value => 'Send', 
+            :name => 'commit', :id => 'email_reminder_submit' }
