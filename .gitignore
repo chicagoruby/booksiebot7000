@@ -4,3 +4,4 @@ tmp/**/*
 .*.sw*
 db/*.db
 .bundle
+.rvmrc
