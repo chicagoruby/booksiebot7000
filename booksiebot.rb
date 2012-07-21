@@ -1,3 +1,5 @@
+require 'sinatra'
+
 class Booksiebot < Sinatra::Base
   set :haml, { :format => :html5 }
   enable :sessions

@@ -1,7 +1,7 @@
 source :rubygems
 
 gem 'sinatra'
-gem 'sqlite3-ruby'
+gem 'sqlite3'
 gem 'sinatra-sequel'
 gem 'haml'
 gem 'rack-flash'
